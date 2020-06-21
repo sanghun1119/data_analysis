@@ -12,3 +12,7 @@ mpg %>%
   ggplot(aes(x = manufacturer,
              y = hwy)) +
   geom_boxplot(aes(fill = manufacturer))
+
+mpg %>%
+  filter(manufacturer =="hyundai") %>%
+  write_csv("hyundai.csv")
